@@ -1,5 +1,39 @@
-header {
-  color: black;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* ------> HEADER <------ */
+.header-accueil {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 1px 5px #352617;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* ------> LOCALISATION <------ */
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background: #99E2D0;
+}
+.localisation p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.localisation p, .localisation i {
+  color: #352617;
+  margin: 0 5px;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
