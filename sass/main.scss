@@ -5,6 +5,7 @@ $tertiary-color: #99E2D0;
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
 }
 
@@ -34,7 +35,6 @@ h1 {
     background: $tertiary-color;
     
     & p {
-        font-family: "Roboto", sans-serif;
         font-weight: 500;
     }
 
@@ -42,5 +42,36 @@ h1 {
         color:#352617;
         margin: 0 5px;
         font-size: 1.5rem;
+    }
+}
+
+
+/* ------> PRESENTATION <------ */
+
+.presentation {
+    text-align: center;
+    padding: 60px 40px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 2.6rem;
+    }
+
+    &__description {
+        font-weight: 300;
+        font-size: 1.8rem;
+        margin: 20px 0;
+    }
+
+    &__button {
+        font-weight: 500;
+        font-size: 1.3rem;
+        color: white;
+        background: $primary-color;
+        margin: 20px 0;
+        padding: 20px 30px;
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0 1px 5px #352617;
     }
 }

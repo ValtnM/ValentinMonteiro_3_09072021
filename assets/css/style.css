@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
@@ -27,13 +28,38 @@ h1 {
   background: #99E2D0;
 }
 .localisation p {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 .localisation p, .localisation i {
   color: #352617;
   margin: 0 5px;
   font-size: 1.5rem;
+}
+
+/* ------> PRESENTATION <------ */
+.presentation {
+  text-align: center;
+  padding: 60px 40px;
+}
+.presentation__title {
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+.presentation__description {
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin: 20px 0;
+}
+.presentation__button {
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: white;
+  background: #9356DC;
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 1px 5px #352617;
 }
 
 /*# sourceMappingURL=style.css.map */
