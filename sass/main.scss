@@ -1,7 +1,7 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
-
+$box-shadow: 0 2px 5px $tertiary-color;
 * {
     margin: 0;
     box-sizing: border-box;
@@ -75,3 +75,57 @@ h1 {
         box-shadow: 0 1px 5px #352617;
     }
 }
+
+
+/* ------> EXPLICATION <------- */
+
+.explication {
+    margin: 0 20px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    &__description {
+        text-align: center;
+
+        &__step {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: auto;
+            background: lighten($tertiary-color, 17);
+            padding: 35px 40px;
+            margin: 0 0 20px 20px;
+            border-radius: 30px;
+            box-shadow: $box-shadow;
+
+            & p, i, h3 {
+                font-size: 1.2rem;
+            }
+
+            & p {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                color: white;
+                width: 1.7rem;
+                height: 1.7rem;
+                line-height: 1.7rem;
+                background: $primary-color;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            & i {
+                color: darken($tertiary-color, 50);
+                margin-right: 25px;
+            }
+            
+        }
+    }
+}
+
