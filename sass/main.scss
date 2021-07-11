@@ -104,11 +104,11 @@ h1 {
             border-radius: 30px;
             box-shadow: $box-shadow;
 
-            & p, i, h3 {
+            &__number, &__icon, &__title {
                 font-size: 1.2rem;
             }
 
-            & p {
+            &__number {
                 position: absolute;
                 top: 50%;
                 left: 0;
@@ -121,7 +121,7 @@ h1 {
                 transform: translate(-50%, -50%);
             }
 
-            & i {
+            &__icon {
                 color: darken($tertiary-color, 50);
                 margin-right: 25px;
             }
@@ -193,6 +193,41 @@ h1 {
             font-size: 1.5rem;
             font-weight: normal;
             color: $primary-color;
+        }
+    }
+}
+
+
+/* ------> FOOTER <------ */
+
+.footer {
+    background: lighten(black, 20);
+    padding: 20px 20px;
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: "Shrikhand";
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    &__links {
+        & .link {
+            display: flex;
+            text-decoration: none;
+            color: white;
+            padding: 5px 0;
+
+            &__icon {
+                width: 0.8rem;
+                font-size: 0.8rem;
+                margin-right: 10px;
+            }
+
+            &__name {
+                font-size: 0.8rem;
+            }
         }
     }
 }
