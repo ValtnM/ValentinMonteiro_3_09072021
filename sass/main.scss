@@ -1,7 +1,7 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
-$box-shadow: 0 2px 5px $tertiary-color;
+$box-shadow: 0 2px 5px lighten($tertiary-color,5);
 * {
     margin: 0;
     box-sizing: border-box;
@@ -14,13 +14,34 @@ $box-shadow: 0 2px 5px $tertiary-color;
 
 .header-accueil {
     position: relative;
+    height: 5rem;
     z-index: 2;
-    box-shadow: 0 1px 5px #352617;
+    box-shadow: $box-shadow;
+}
+
+.header-menu {
+
+    &__nav {
+        position: relative;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        padding: 15px 25px;
+    }
+
+    &__banner {
+        width: 100%;
+    }
 }
 
 h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     font-family: "Shrikhand", sans-serif;
     font-size: 3rem;
+    font-weight: 400;
     text-align: center;
     padding: 15px 0;
 }
@@ -32,7 +53,7 @@ h1 {
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    background: $tertiary-color;
+    background: lighten($tertiary-color,15);
     
     & p {
         font-weight: 500;
@@ -51,6 +72,7 @@ h1 {
 .presentation {
     text-align: center;
     padding: 60px 40px;
+    background: lighten($tertiary-color, 20);
 
     &__title {
         font-weight: 700;
@@ -67,7 +89,7 @@ h1 {
         font-weight: 500;
         font-size: 1.3rem;
         color: white;
-        background: $primary-color;
+        background: linear-gradient(331deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(0,212,255,1) 100%);
         margin: 20px 0;
         padding: 20px 30px;
         border: none;
@@ -231,3 +253,7 @@ h1 {
         }
     }
 }
+
+
+/* ------> HEADER-MENU <------- */
+

@@ -8,13 +8,30 @@
 /* ------> HEADER <------ */
 .header-accueil {
   position: relative;
+  height: 5rem;
   z-index: 2;
-  box-shadow: 0 1px 5px #352617;
+  box-shadow: 0 2px 5px #ade8d9;
+}
+
+.header-menu__nav {
+  position: relative;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+}
+.header-menu__banner {
+  width: 100%;
 }
 
 h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-family: "Shrikhand", sans-serif;
   font-size: 3rem;
+  font-weight: 400;
   text-align: center;
   padding: 15px 0;
 }
@@ -25,7 +42,7 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-  background: #99E2D0;
+  background: #d5f3eb;
 }
 .localisation p {
   font-weight: 500;
@@ -40,6 +57,7 @@ h1 {
 .presentation {
   text-align: center;
   padding: 60px 40px;
+  background: #e8f9f5;
 }
 .presentation__title {
   font-weight: 700;
@@ -54,7 +72,7 @@ h1 {
   font-weight: 500;
   font-size: 1.3rem;
   color: white;
-  background: #9356DC;
+  background: linear-gradient(331deg, #020024 0%, #9356dc 0%, #00d4ff 100%);
   margin: 20px 0;
   padding: 20px 30px;
   border: none;
@@ -85,7 +103,7 @@ h1 {
   padding: 35px 40px;
   margin: 0 0 20px 20px;
   border-radius: 30px;
-  box-shadow: 0 2px 5px #99E2D0;
+  box-shadow: 0 2px 5px #ade8d9;
 }
 .explication__description .step__number, .explication__description .step__icon, .explication__description .step__title {
   font-size: 1.2rem;
@@ -119,7 +137,7 @@ h1 {
 
 .restaurant-menu {
   border-radius: 20px;
-  box-shadow: 0 2px 5px #99E2D0;
+  box-shadow: 0 2px 5px #ade8d9;
   margin-top: 20px;
   height: 300px;
 }
@@ -186,5 +204,7 @@ h1 {
 .footer__links .link__name {
   font-size: 0.8rem;
 }
+
+/* ------> HEADER-MENU <------- */
 
 /*# sourceMappingURL=style.css.map */
