@@ -10,6 +10,14 @@ a {
   color: black;
 }
 
+header {
+  background: #fff;
+}
+
+#container {
+  background: #d5f3eb;
+}
+
 /* ------> HEADER <------ */
 .header-accueil {
   position: relative;
@@ -82,16 +90,21 @@ h1 {
   font-weight: 500;
   font-size: 1.3rem;
   color: white;
-  background: linear-gradient(331deg, #020024 0%, #9356dc 0%, #00d4ff 100%);
+  background: #9356DC;
   border: none;
   border-radius: 30px;
   box-shadow: 0 1px 5px #352617;
+  cursor: pointer;
+}
+.button:hover {
+  background: #a16be0;
+  box-shadow: 0 2px 8px #352617;
 }
 
 /* ------> EXPLICATION <------- */
 .explication {
-  margin: 0 20px;
-  padding: 50px 0;
+  padding: 50px 20px;
+  background: #fff;
 }
 .explication__title {
   font-weight: 700;
@@ -112,6 +125,9 @@ h1 {
   margin: 0 0 20px 20px;
   border-radius: 30px;
   box-shadow: 0 2px 5px #ade8d9;
+}
+.explication__description .step:hover {
+  background: #ece1f9;
 }
 .explication__description .step__number, .explication__description .step__icon, .explication__description .step__title {
   font-size: 1.2rem;
@@ -142,12 +158,18 @@ h1 {
   font-weight: 700;
   font-size: 2.6rem;
 }
+.restaurants__list a {
+  background: #000;
+}
 
 .restaurant-menu {
   border-radius: 20px;
   box-shadow: 0 2px 5px #ade8d9;
   margin-top: 20px;
   height: 300px;
+}
+.restaurant-menu:hover {
+  background: #e4d5f6;
 }
 .restaurant-menu__image {
   position: relative;
@@ -182,8 +204,8 @@ h1 {
 }
 .restaurant-menu__description i {
   font-size: 1.5rem;
+  color: #000;
   font-weight: normal;
-  color: #9356DC;
 }
 
 /* ------> FOOTER <------ */
@@ -203,6 +225,10 @@ h1 {
   text-decoration: none;
   color: white;
   padding: 5px 0;
+}
+.footer__links .link:hover {
+  color: #9356DC;
+  font-weight: 600;
 }
 .footer__links .link__icon {
   width: 0.8rem;

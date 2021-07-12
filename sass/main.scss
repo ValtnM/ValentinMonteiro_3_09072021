@@ -2,6 +2,8 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $box-shadow: 0 2px 5px lighten($tertiary-color,5);
+$bg-button: linear-gradient(331deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(0,212,255,1) 100%);
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -14,6 +16,13 @@ a {
     color: black;
 }
 
+header {
+    background: #fff;
+}
+
+ #container {
+     background: lighten($tertiary-color, 15);
+ }
  /* ------> HEADER <------ */
 
 .header-accueil {
@@ -99,17 +108,23 @@ h1 {
     font-weight: 500;
     font-size: 1.3rem;
     color: white;
-    background: linear-gradient(331deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(0,212,255,1) 100%);
+    background: $primary-color;
     border: none;
     border-radius: 30px;
     box-shadow: 0 1px 5px #352617;
+    cursor: pointer;
+
+    &:hover {
+        background:lighten($primary-color, 5);
+        box-shadow: 0 2px 8px #352617;
+    }
 }
 
 /* ------> EXPLICATION <------- */
 
 .explication {
-    margin: 0 20px;
-    padding: 50px 0 ;
+    padding: 50px 20px ;
+    background: #fff;
 
     &__title {
         font-weight: 700;
@@ -131,6 +146,10 @@ h1 {
             margin: 0 0 20px 20px;
             border-radius: 30px;
             box-shadow: $box-shadow;
+
+            &:hover {
+                background: lighten($primary-color,33);
+            }
 
             &__number, &__icon, &__title {
                 font-size: 1.2rem;
@@ -169,6 +188,11 @@ h1 {
         font-weight: 700;
         font-size: 2.6rem;
     }
+
+    &__list a { 
+        background: #000;
+        
+    }
 }
 
 
@@ -177,6 +201,10 @@ h1 {
     box-shadow: $box-shadow;
     margin-top: 20px;
     height: 300px;
+
+    &:hover {
+        background: lighten($primary-color, 30);
+    }
 
     &__image {
         position: relative;
@@ -219,8 +247,9 @@ h1 {
 
         & i {
             font-size: 1.5rem;
+            color: #000;
             font-weight: normal;
-            color: $primary-color;
+            
         }
     }
 }
@@ -246,6 +275,11 @@ h1 {
             text-decoration: none;
             color: white;
             padding: 5px 0;
+
+            &:hover {
+                color: $primary-color;
+                font-weight: 600;
+            }
 
             &__icon {
                 width: 0.8rem;
