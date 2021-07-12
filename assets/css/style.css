@@ -5,6 +5,11 @@
   font-size: 16px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* ------> HEADER <------ */
 .header-accueil {
   position: relative;
@@ -69,12 +74,15 @@ h1 {
   margin: 20px 0;
 }
 .presentation__button {
+  margin: 20px 0;
+  padding: 20px 30px;
+}
+
+.button {
   font-weight: 500;
   font-size: 1.3rem;
   color: white;
   background: linear-gradient(331deg, #020024 0%, #9356dc 0%, #00d4ff 100%);
-  margin: 20px 0;
-  padding: 20px 30px;
   border: none;
   border-radius: 30px;
   box-shadow: 0 1px 5px #352617;
@@ -205,6 +213,75 @@ h1 {
   font-size: 0.8rem;
 }
 
-/* ------> HEADER-MENU <------- */
+/* ------> MENU <------- */
+.menu {
+  position: relative;
+  top: -40px;
+  background: #d5f3eb;
+  border-radius: 40px;
+  padding: 40px 20px;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.menu-title h2 {
+  font-family: "Shrikhand";
+  font-size: 2.5rem;
+}
+.menu-title i {
+  font-size: 2rem;
+  padding-right: 30px;
+}
+
+.menu-description {
+  padding-bottom: 100px;
+}
+.menu-description > article {
+  margin-bottom: 40px;
+}
+.menu-description h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.menu-description h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: black;
+  margin: 5px 0;
+}
+
+.dish {
+  background: #fff;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px #ade8d9;
+}
+.dish__title {
+  font-size: 1.2rem;
+}
+.dish__details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+}
+.dish__details-price {
+  font-weight: 600;
+}
+
+.order-button {
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
+  padding: 15px 60px;
+}
 
 /*# sourceMappingURL=style.css.map */
