@@ -372,13 +372,40 @@ h1 {
 }
 
 .dish {
-    background: #fff;
+    position: relative;
     margin-top: 20px ;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+        & .dish-informations {
+            width: calc(100% - 80px);
+            border-radius: 20px 0 0 20px;
+        }
+
+        & .dish-icon {
+            transform: translate(0, -50%) rotate(360deg);
+        }
+    }
+}
+
+.dish-informations {
+    position: relative;
+    width: 100%;
+    background: #fff;
     padding: 15px;
     border-radius: 20px;
     box-shadow: $box-shadow;
+    transform-origin: left;
+    z-index: 10;
+    overflow: hidden;
+    transition: all 800ms;
+
+   
 
     &__title {
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
         font-size: 1.2rem;
     }
 
@@ -386,11 +413,42 @@ h1 {
         display: flex;
         justify-content: space-between;
         margin-top: 7px;
+        
+        
+        &-description {
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
 
         &-price {
             font-weight: 600;
         }
     }
+}
+
+.dish-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: $tertiary-color;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+.dish-icon {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    z-index: 11;
+    font-size: 1.5rem;
+    color: white;
+    transform: translate(65px, -50%) rotate(0);
+
+    transition: all 800ms;
 }
 
 .order-button {

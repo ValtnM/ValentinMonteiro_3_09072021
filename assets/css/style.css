@@ -304,22 +304,72 @@ h1 {
 }
 
 .dish {
-  background: #fff;
+  position: relative;
   margin-top: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.dish:hover .dish-informations {
+  width: calc(100% - 80px);
+  border-radius: 20px 0 0 20px;
+}
+.dish:hover .dish-icon {
+  transform: translate(0, -50%) rotate(360deg);
+}
+
+.dish-informations {
+  position: relative;
+  width: 100%;
+  background: #fff;
   padding: 15px;
   border-radius: 20px;
   box-shadow: 0 2px 5px #ade8d9;
+  transform-origin: left;
+  z-index: 10;
+  overflow: hidden;
+  transition: all 800ms;
 }
-.dish__title {
+.dish-informations__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 1.2rem;
 }
-.dish__details {
+.dish-informations__details {
   display: flex;
   justify-content: space-between;
   margin-top: 7px;
 }
-.dish__details-price {
+.dish-informations__details-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dish-informations__details-price {
   font-weight: 600;
+}
+
+.dish-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background: #99E2D0;
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.dish-icon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  z-index: 11;
+  font-size: 1.5rem;
+  color: white;
+  transform: translate(65px, -50%) rotate(0);
+  transition: all 800ms;
 }
 
 .order-button {
