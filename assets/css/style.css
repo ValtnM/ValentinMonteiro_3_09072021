@@ -150,6 +150,17 @@ h1 {
 }
 
 /* ------> RESTAURANTS <------ */
+@keyframes hearts {
+  0% {
+    transform: scale(0);
+  }
+  85% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 .restaurants {
   padding: 50px 20px;
   background: #e8f9f5;
@@ -157,9 +168,6 @@ h1 {
 .restaurants__title {
   font-weight: 700;
   font-size: 2.6rem;
-}
-.restaurants__list a {
-  background: #000;
 }
 
 .restaurant-menu {
@@ -175,7 +183,7 @@ h1 {
   position: relative;
   height: 75%;
 }
-.restaurant-menu__image img {
+.restaurant-menu__image .image {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -202,10 +210,22 @@ h1 {
   font-weight: 800;
   margin-bottom: 5px;
 }
-.restaurant-menu__description i {
-  font-size: 1.5rem;
-  color: #000;
+.restaurant-menu__description .empty-heart {
+  position: relative;
   font-weight: normal;
+  color: #000;
+}
+.restaurant-menu__description .empty-heart:hover .full-heart {
+  animation: hearts 500ms ease-in-out forwards alternate;
+}
+.restaurant-menu__description .full-heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+  color: #9356DC;
 }
 
 /* ------> FOOTER <------ */
