@@ -377,6 +377,7 @@ h1 {
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
+    animation: dish-effect 1s both;
     &:hover {
         & .dish-informations {
             width: calc(100% - 80px);
@@ -393,11 +394,11 @@ h1 {
     width: 100%;
     background: #fff;
     padding: 15px;
-    // border-radius: 20px;
     box-shadow: $box-shadow;
     transform-origin: left;
     z-index: 10;
     overflow: hidden;
+    
     transition: all 800ms;
 
    
@@ -449,6 +450,32 @@ h1 {
 
     transition: all 800ms;
 }
+
+@for $i from 1 through 4 {
+    .dish:nth-child(#{$i}) {
+        animation-delay: 2600ms + 200ms*$i;
+    }
+
+    // .main-course div:nth-child(#{$i}) {
+    //     animation-delay: 3000ms + 150ms*$i;
+    // }
+
+    // .dessert div:nth-child(#{$i}) {
+    //     animation-delay: 3000ms + 200ms*$i;
+    // }
+}
+
+@keyframes dish-effect {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 .order-button {
     position: absolute;
