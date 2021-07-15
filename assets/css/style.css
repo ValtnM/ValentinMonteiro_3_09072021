@@ -291,7 +291,7 @@ h1 {
 }
 .menu-title h2 {
   font-family: "Shrikhand";
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .menu-title .empty-heart {
   position: relative;
@@ -582,6 +582,11 @@ h1 {
   }
 }
 /* ------> Responsive <------ */
+@media screen and (min-width: 500px) {
+  .menu-title h2 {
+    font-size: 2.5rem;
+  }
+}
 @media screen and (min-width: 1000px) {
   .header-menu__banner {
     max-height: 400px;
@@ -602,12 +607,6 @@ h1 {
   }
   .description__text {
     font-size: 1.3rem;
-  }
-
-  .menu-description {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
   }
 
   .footer {
@@ -654,6 +653,13 @@ h1 {
     padding: 0 30px;
   }
 
+  .menu-description {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1275px) {
   .menu-description article {
     width: 30%;
   }
