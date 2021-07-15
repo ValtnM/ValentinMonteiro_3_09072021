@@ -47,6 +47,9 @@ header {
 
     &__banner {
         width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        vertical-align: top;
     }
 }
 
@@ -296,7 +299,7 @@ h1 {
 
 .footer {
     background: lighten(black, 20);
-    padding: 20px 20px;
+    padding: 20px;
 
     &__title {
         font-size: 1rem;
@@ -307,8 +310,10 @@ h1 {
     }
 
     &__links {
+        display: flex;
+        flex-direction: column;
         & .link {
-            display: flex;
+            display: inline-flex;
             text-decoration: none;
             color: white;
             padding: 5px 0;
@@ -445,6 +450,7 @@ h1 {
 
         &-price {
             font-weight: 600;
+            padding-left: 10px;
         }
     }
 }
@@ -600,3 +606,48 @@ h1 {
       }
   }
   
+
+  /* ------> Responsive <------ */
+
+  @media screen and (min-width:1000px) {
+    
+    .header-menu__banner {
+        max-height: 400px;
+    }
+
+    .menu-description {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .footer {
+        padding: 20px;
+        text-align: center;
+
+        &__title {
+            font-size: 1.5rem;
+        }
+
+        &__links {
+
+            & .link {
+                margin: auto;
+                &__icon, &__name {
+                font-size: 1rem;
+                }
+            }
+        }
+    }
+  }
+
+  @media screen and (min-width:1200px) {
+
+    
+    .menu-description {
+        & article {
+            width: 30%;
+        }
+    }
+  }
