@@ -16,6 +16,10 @@ header {
 
 #container {
   background: #d5f3eb;
+  max-width: 1400px;
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ------> HEADER <------ */
@@ -208,11 +212,6 @@ h1 {
   padding: 25px 20px 15px 15px;
   height: 25%;
 }
-.restaurant-menu__description .description__title {
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin-bottom: 5px;
-}
 .restaurant-menu__description .empty-heart {
   position: relative;
   font-weight: normal;
@@ -231,6 +230,12 @@ h1 {
   font-size: 1.5rem;
   transform: scale(0);
   color: #9356DC;
+}
+
+.description__title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 5px;
 }
 
 /* ------> FOOTER <------ */
@@ -581,6 +586,23 @@ h1 {
     max-height: 400px;
   }
 
+  .restaurants__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .restaurants__list > a {
+    width: 45%;
+  }
+
+  .description__title {
+    font-size: 1.6rem;
+  }
+  .description__text {
+    font-size: 1.3rem;
+  }
+
   .menu-description {
     width: 100%;
     display: flex;
@@ -592,16 +614,45 @@ h1 {
     text-align: center;
   }
   .footer__title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .footer__links .link {
     margin: auto;
   }
-  .footer__links .link__icon, .footer__links .link__name {
-    font-size: 1rem;
+  .footer__links .link__icon {
+    font-size: 1.2rem;
+    margin-right: 20px;
+  }
+  .footer__links .link__name {
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1200px) {
+  .header-accueil, .header-menu__nav {
+    height: 6rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .explication__description {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .explication__description .step {
+    width: 30%;
+  }
+  .explication__description .step__number, .explication__description .step__icon, .explication__description .step__title {
+    font-size: 1.5rem;
+  }
+
+  .menu-title {
+    padding: 0 30px;
+  }
+
   .menu-description article {
     width: 30%;
   }

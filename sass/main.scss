@@ -23,6 +23,10 @@ header {
 
 #container {
      background: lighten($tertiary-color, 15);
+     max-width: 1400px;
+     min-width: 400px;
+     margin-left: auto;
+     margin-right: auto;
  }
 
 
@@ -33,6 +37,7 @@ header {
     height: 5rem;
     z-index: 2;
     box-shadow: $box-shadow-grey;
+    
 }
 
 .header-menu {
@@ -269,15 +274,6 @@ h1 {
         padding: 25px 20px 15px 15px;
         height: 25%;
 
-        & .description {
-            &__title {
-                font-size: 1.2rem;
-                font-weight: 800;
-                margin-bottom: 5px;
-            }
-
-        }
-
         & .empty-heart {
             @include empty-hearts($heart-size-accueil);
 
@@ -290,6 +286,15 @@ h1 {
             @include full-hearts($heart-size-accueil);
         }
     }
+}
+
+.description {
+    &__title {
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
+
 }
 
 
@@ -615,6 +620,33 @@ h1 {
         max-height: 400px;
     }
 
+    .restaurants {
+        
+        &__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            & > a {
+                width: 45%;
+            }
+        }
+    }
+
+    
+
+    .description {
+
+        &__title {
+            font-size: 1.6rem;
+        }
+
+        &__text {
+            font-size: 1.3rem;
+        }
+    }
+
     .menu-description {
         width: 100%;
         display: flex;
@@ -627,24 +659,60 @@ h1 {
         text-align: center;
 
         &__title {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
         &__links {
 
             & .link {
                 margin: auto;
-                &__icon, &__name {
-                font-size: 1rem;
+                &__icon {
+                    font-size: 1.2rem;
+                    margin-right: 20px;
+                } 
+                &__name {
+                    font-size: 1.2rem;
                 }
             }
         }
     }
+
+
   }
 
   @media screen and (min-width:1200px) {
 
+    .header-accueil, .header-menu__nav {
+        height: 6rem;
+    }
     
+    h1 {
+        font-size: 5rem;
+    }
+
+    
+
+    .explication {
+        &__description {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            & .step {
+                width: 30%;
+
+                &__number, &__icon, &__title {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    
+    .menu-title {
+        padding:0 30px ;
+    }
+
     .menu-description {
         & article {
             width: 30%;
