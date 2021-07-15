@@ -1,8 +1,9 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
-$box-shadow: 0 2px 5px lighten($tertiary-color,5);
-$bg-button: linear-gradient(331deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(0,212,255,1) 100%);
+$box-shadow-grey: 0 2px 5px lighten($tertiary-color,5);
+$heart-size-accueil: 1.5rem;
+$heart-size-restaurant: 2rem;
 
 * {
     margin: 0;
@@ -20,16 +21,18 @@ header {
     background: #fff;
 }
 
- #container {
+#container {
      background: lighten($tertiary-color, 15);
  }
+
+
  /* ------> HEADER <------ */
 
 .header-accueil {
     position: relative;
     height: 5rem;
     z-index: 2;
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow-grey;
 }
 
 .header-menu {
@@ -145,7 +148,7 @@ h1 {
             padding: 35px 40px;
             margin: 0 0 20px 20px;
             border-radius: 30px;
-            box-shadow: $box-shadow;
+            box-shadow: $box-shadow-grey;
 
             &:hover {
                 background: lighten($primary-color,33);
@@ -205,10 +208,27 @@ h1 {
     }
 }
 
+@mixin empty-hearts($heart-size) {
+    position: relative;
+    font-weight: normal;
+    font-size: $heart-size;
+    color: #000;
+}
+
+@mixin full-hearts($heart-size) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: $heart-size;
+    transform: scale(0);
+    color: $primary-color;
+}
 
 .restaurant-menu {
     border-radius: 20px;
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow-grey;
     margin-top: 20px;
     height: 300px;
 
@@ -256,9 +276,7 @@ h1 {
         }
 
         & .empty-heart {
-            position: relative;
-            font-weight: normal;
-            color: #000;
+            @include empty-hearts($heart-size-accueil);
 
             &:hover .full-heart {
                 animation: hearts 500ms ease-in-out forwards alternate ;
@@ -266,17 +284,12 @@ h1 {
         }
 
         & .full-heart {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            transform: scale(0);
-            color: $primary-color;
-            
+            @include full-hearts($heart-size-accueil);
         }
     }
 }
+
+
 
 
 /* ------> FOOTER <------ */
@@ -340,9 +353,17 @@ h1 {
         font-size: 2.5rem;
     }
 
-    & i {
-        font-size: 2rem;
-        padding-right: 30px;
+   
+    & .empty-heart {
+        @include empty-hearts($heart-size-restaurant);
+
+        &:hover .full-heart {
+            animation: hearts 500ms ease-in-out forwards alternate ;
+        }
+    }
+
+    & .full-heart {
+        @include full-hearts($heart-size-restaurant);
     }
 }
 
@@ -377,7 +398,7 @@ h1 {
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
-    animation: dish-effect 1s both;
+    animation: dish-effect 1.5s both;
     &:hover {
         & .dish-informations {
             width: calc(100% - 80px);
@@ -394,7 +415,7 @@ h1 {
     width: 100%;
     background: #fff;
     padding: 15px;
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow-grey;
     transform-origin: left;
     z-index: 10;
     overflow: hidden;
@@ -452,17 +473,9 @@ h1 {
 }
 
 @for $i from 1 through 4 {
-    .dish:nth-child(#{$i}) {
-        animation-delay: 2600ms + 200ms*$i;
+    .dish:nth-of-type(#{$i}) {
+        animation-delay: 2800ms + 200ms*$i;
     }
-
-    // .main-course div:nth-child(#{$i}) {
-    //     animation-delay: 3000ms + 150ms*$i;
-    // }
-
-    // .dessert div:nth-child(#{$i}) {
-    //     animation-delay: 3000ms + 200ms*$i;
-    // }
 }
 
 @keyframes dish-effect {
@@ -488,10 +501,7 @@ h1 {
 
 /* ------> LOADER <------ */
 
-#container {
-    animation: translate 0ms 3s both ;
-    transform: translateX(-9900px);
-}
+
 
 .loader {
     position: fixed;
@@ -502,14 +512,16 @@ h1 {
     margin: auto;
     width: 100%;
     height: 100%;
-    z-index: -50;
+    z-index: 50;
     background-color: lighten($tertiary-color, 20);
+    animation: translate-loader 0ms 3s both ;
 }
 
 .spin-loader {
     position:relative;
+    top: 50%;
+    transform: translateY(-50%);
     margin:auto;
-    padding-top:300px ;
     width:200px;
     height:200px;
   }
@@ -579,12 +591,12 @@ h1 {
     
   }
 
-  @keyframes translate {
+  @keyframes translate-loader {
       from {
-          transform: translateX(-5000px);
+          transform: translateX(0);
       }
       to {
-          transform: translateX(0);
+          transform: translateX(-5000px);
       }
   }
   
