@@ -185,6 +185,7 @@ h1 {
 }
 .restaurant-menu:hover {
   background: #e4d5f6;
+  box-shadow: 0 6px 7px #a5e5d5;
 }
 .restaurant-menu__image {
   position: relative;
@@ -402,19 +403,19 @@ h1 {
 }
 
 .dish:nth-of-type(1) {
-  animation-delay: 3000ms;
+  animation-delay: 0ms;
 }
 
 .dish:nth-of-type(2) {
-  animation-delay: 3200ms;
+  animation-delay: 200ms;
 }
 
 .dish:nth-of-type(3) {
-  animation-delay: 3400ms;
+  animation-delay: 400ms;
 }
 
 .dish:nth-of-type(4) {
-  animation-delay: 3600ms;
+  animation-delay: 600ms;
 }
 
 @keyframes dish-effect {

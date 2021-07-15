@@ -242,6 +242,7 @@ h1 {
 
     &:hover {
         background: lighten($primary-color, 30);
+        box-shadow: 0 6px 7px lighten($tertiary-color,3);
     }
 
     &__image {
@@ -485,7 +486,7 @@ h1 {
 
 @for $i from 1 through 4 {
     .dish:nth-of-type(#{$i}) {
-        animation-delay: 2800ms + 200ms*$i;
+        animation-delay: -200ms + 200ms*$i;
     }
 }
 
