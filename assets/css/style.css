@@ -2,7 +2,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 11px;
 }
 
 a {
@@ -17,7 +17,7 @@ header {
 #container {
   background: #d5f3eb;
   max-width: 1400px;
-  min-width: 400px;
+  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -76,7 +76,7 @@ h1 {
 /* ------> PRESENTATION <------ */
 .presentation {
   text-align: center;
-  padding: 60px 40px;
+  padding: 40px 15px;
   background: #e8f9f5;
 }
 .presentation__title {
@@ -181,7 +181,7 @@ h1 {
   border-radius: 20px;
   box-shadow: 0 2px 5px #ade8d9;
   margin-top: 20px;
-  height: 300px;
+  height: 200px;
 }
 .restaurant-menu:hover {
   background: #e4d5f6;
@@ -583,6 +583,18 @@ h1 {
 }
 /* ------> Responsive <------ */
 @media screen and (min-width: 500px) {
+  * {
+    font-size: 16px;
+  }
+
+  .presentation {
+    padding: 60px 40px;
+  }
+
+  .restaurant-menu {
+    height: 300px;
+  }
+
   .menu-title h2 {
     font-size: 2.5rem;
   }
