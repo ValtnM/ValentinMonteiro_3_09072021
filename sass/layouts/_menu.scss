@@ -1,0 +1,193 @@
+
+
+
+/* ------> MENU <------- */
+
+.menu {
+    position: relative;
+    top: -40px;
+    background: $bg-color;
+    border-radius: 40px;
+    padding: 40px 20px;
+}
+
+.menu-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    & h2 {
+        font-family: "Shrikhand";
+        font-size: 2rem;
+    }
+
+   
+    & .empty-heart {
+        @include empty-hearts($heart-size-restaurant);
+
+        &:hover .full-heart {
+            animation: hearts 500ms ease-in-out forwards alternate ;
+        }
+    }
+
+    & .full-heart {
+        @include full-hearts($heart-size-restaurant);
+    }
+}
+
+.menu-description {
+
+    padding-bottom: 100px;
+
+
+    & > article {
+        margin-bottom: 40px;
+    }
+
+    & h3 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: $tertiary-color;
+            margin: 5px 0;
+        }
+    }
+}
+
+.dish {
+    position: relative;
+    margin-top: 20px ;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    animation: dish-effect 1.5s both;
+    &:hover {
+        & .dish-informations {
+            width: calc(100% - 80px);
+        }
+
+        & .dish-icon {
+            transform: translate(0, -50%) rotate(360deg);
+        }
+    }
+}
+
+.dish-informations {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    box-shadow: $box-shadow-grey;
+    transform-origin: left;
+    z-index: 10;
+    overflow: hidden;
+    
+    transition: all 800ms;
+
+   
+
+    &__title {
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        font-size: 1.2rem;
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7px;
+        
+        
+        &-description {
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+
+        &-price {
+            font-weight: 600;
+            padding-left: 10px;
+        }
+    }
+}
+
+.dish-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: $tertiary-color;
+    z-index: 0;
+}
+
+.dish-icon {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    z-index: 11;
+    font-size: 1.5rem;
+    color: white;
+    transform: translate(65px, -50%) rotate(0);
+
+    transition: all 800ms;
+}
+
+@for $i from 1 through 4 {
+    .dish:nth-of-type(#{$i}) {
+        animation-delay: -200ms + 200ms*$i;
+    }
+}
+
+@keyframes dish-effect {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* -----> RESPONSIVE <------ */
+
+@media screen and (min-width: map-get($breakpoints, S)) {
+    .menu-title {
+        & h2 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($breakpoints, L)) {
+    .menu-title {
+        padding:0 30px ;
+    }
+
+    .menu-description {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    }
+@media screen and (min-width: map-get($breakpoints, XL)) {
+    .menu-description {
+                
+        & article {
+            width: 30%;
+        }
+    }
+}

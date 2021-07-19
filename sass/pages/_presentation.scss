@@ -1,0 +1,34 @@
+
+
+/* ------> PRESENTATION <------ */
+
+.presentation {
+    text-align: center;
+    padding: 40px 15px;
+    background: #f6f6f6;
+
+    &__title {
+        font-weight: 700;
+        font-size: 2.6rem;
+    }
+
+    &__description {
+        font-weight: 300;
+        font-size: 1.8rem;
+        margin: 20px 0;
+    }
+
+    &__button {
+        margin: 20px 0;
+    padding: 20px 30px;
+    }
+}
+
+
+/* -----> RESPONSIVE <------ */
+
+@media screen and (min-width: map-get($breakpoints, S)) {
+    .presentation {
+        padding: 60px 40px;
+    }
+}

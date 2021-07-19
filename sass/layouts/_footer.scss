@@ -1,0 +1,70 @@
+
+/* ------> FOOTER <------ */
+
+.footer {
+    background: #353535;
+    padding: 20px;
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: "Shrikhand";
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        & .link {
+            display: inline-flex;
+            text-decoration: none;
+            color: white;
+            padding: 5px 0;
+
+            &:hover {
+                color: $primary-color;
+                font-weight: 600;
+            }
+
+            &__icon {
+                width: 0.8rem;
+                font-size: 0.8rem;
+                margin-right: 10px;
+            }
+
+            &__name {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+
+
+/* -----> RESPONSIVE <------ */
+
+@media screen and (min-width: map-get($breakpoints, M)) {
+    .footer {
+        padding: 20px;
+        text-align: center;
+
+        &__title {
+            font-size: 1.8rem;
+        }
+
+        &__links {
+
+            & .link {
+                margin: auto;
+                &__icon {
+                    font-size: 1.2rem;
+                    margin-right: 20px;
+                } 
+                &__name {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

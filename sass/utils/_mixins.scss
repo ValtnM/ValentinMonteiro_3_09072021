@@ -1,0 +1,17 @@
+@mixin empty-hearts($heart-size) {
+    position: relative;
+    font-weight: normal;
+    font-size: $heart-size;
+    color: #000;
+}
+
+@mixin full-hearts($heart-size) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: $heart-size;
+    transform: scale(0);
+    color: $primary-color;
+}

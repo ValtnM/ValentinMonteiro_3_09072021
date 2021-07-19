@@ -1,0 +1,21 @@
+
+
+/* ------> LOCALISATION <------ */
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: #eaeaea;
+    
+    & p {
+        font-weight: 500;
+    }
+
+    & p, i {
+        color:#352617;
+        margin: 0 5px;
+        font-size: 1.5rem;
+    }
+}
