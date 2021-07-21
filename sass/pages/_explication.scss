@@ -29,7 +29,12 @@
 
             &:hover {
                 background: lighten($primary-color,33);
+
+                & .step__icon {
+                    color: $primary-color;
+                }
             }
+
 
             &__number, &__icon, &__title {
                 font-size: 1.2rem;

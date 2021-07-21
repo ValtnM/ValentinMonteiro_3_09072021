@@ -36,6 +36,22 @@
     }
 }
 
+
+@keyframes hearts {
+    0% {
+        transform: scale(0);
+    }
+
+    85% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
 .menu-description {
 
     padding-bottom: 100px;
@@ -88,7 +104,6 @@
     transform-origin: left;
     z-index: 10;
     overflow: hidden;
-    
     transition: all 800ms;
 
    
@@ -138,7 +153,6 @@
     font-size: 1.5rem;
     color: white;
     transform: translate(65px, -50%) rotate(0);
-
     transition: all 800ms;
 }
 
