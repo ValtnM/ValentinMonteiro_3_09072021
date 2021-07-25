@@ -335,7 +335,9 @@ h1 {
   left: 0;
   font-size: 2rem;
   transform: scale(0);
-  color: #9356DC;
+  background: linear-gradient(180deg, #9356DC 60%, #FF79DA 100%);
+  background-clip: text;
+  color: transparent;
 }
 
 @keyframes hearts {
@@ -343,10 +345,10 @@ h1 {
     transform: scale(0);
   }
   85% {
-    transform: scale(1.2);
+    transform: scale(1.4);
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 .menu-description {
@@ -658,7 +660,9 @@ h1 {
   left: 0;
   font-size: 1.5rem;
   transform: scale(0);
-  color: #9356DC;
+  background: linear-gradient(180deg, #9356DC 60%, #FF79DA 100%);
+  background-clip: text;
+  color: transparent;
 }
 
 .description__title {

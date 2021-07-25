@@ -16,5 +16,7 @@
     left: 0;
     font-size: $heart-size;
     transform: scale(0);
-    color: $primary-color;
+    background: linear-gradient(180deg, $primary-color 60%, $secondary-color 100%);;
+    background-clip: text;
+    color: transparent;
 }
